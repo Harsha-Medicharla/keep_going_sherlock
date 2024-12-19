@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherlock's Puzzle: The Valuable Scroll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+        }
+        .page-break {
+            padding-top: 300%;
+        }
+        .message {
+            background-color: #ffeaa7;
+            color: #e67e22;
+            padding: 15px;
+            border: 1px solid #e67e22;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Sherlock's Puzzle: The Valuable Scroll</h1>
+
+        <div class="section">
+            <p>Sherlock Holmes is once again in a tricky situation. This time, he needs to organize a series of clues, each represented by a word. These clues must be written on two scrolls. The first scroll has a fixed length, while the second scroll is infinitely long. Sherlock's goal is to maximize the number of clues that can be written on the first scroll, ensuring that no clue is split between the two scrolls.</p>
+
+            <p>The first scroll has limited capacity, and Sherlock must figure out how many clues can fit on it before it exceeds the given capacity. The remaining clues are then written on the second scroll, which can hold an unlimited number of characters.</p>
+
+            <h2>Problem Description</h2>
+            <p>Sherlock has a list of clues represented by <strong>n</strong> words. The first scroll has a limited capacity of <strong>m</strong> characters. Sherlock must determine the maximum number of clues (<strong>x</strong>) that can fit on the first scroll such that the total length of the first <strong>x</strong> words is no greater than <strong>m</strong>. Each word must be written in full on the first scroll; no word can be split between the two scrolls.</p>
+
+            <p>Your task is to find the maximum number <strong>x</strong> such that the total length of the first <strong>x</strong> clues fits within the first scroll's capacity <strong>m</strong>.</p>
+
+            <h2>Input</h2>
+            <p>The first line contains an integer <strong>t</strong> (<strong>1 ≤ t ≤ 1000</strong>) — the number of test cases.</p>
+
+            <p>For each test case:</p>
+            <ul>
+                <li>The first line contains two integers <strong>n</strong> and <strong>m</strong> (<strong>1 ≤ n ≤ 50</strong>; <strong>1 ≤ m ≤ 500</strong>) — the number of clues (words) and the maximum number of characters that can fit on the first scroll.</li>
+                <li>The next <strong>n</strong> lines each contain one word <strong>s_i</strong> (<strong>1 ≤ |s_i| ≤ 10</strong>) made up of lowercase Latin letters.</li>
+            </ul>
+
+            <h2>Output</h2>
+            <p>For each test case, output the maximum number <strong>x</strong> such that the first <strong>x</strong> clues fit on the first scroll without exceeding the capacity <strong>m</strong>.</p>
+
+            <h2>Example</h2>
+            <div class="example">
+                <h3>Input:</h3>
+                <pre>
+3
+5 15
+three
+eight
+the
+man
+in
+4 10
+serious
+the
+case
+is
+2 8
+he
+good
+                </pre>
+                <h3>Output:</h3>
+                <pre>
+3
+2
+2
+                </pre>
+            </div>
+
+            <h2>Explanation</h2>
+            <ul>
+                <li><strong>Test case 1:</strong> Sherlock needs to fit as many clues as possible on the first scroll, which has a maximum capacity of 15 characters. The clues are: ["three", "eight", "the", "man", "in"]. The first three clues "three" (5), "eight" (5), and "the" (3) have a total length of 13, which fits within the 15-character limit. The next clue "man" (3 characters) would exceed the 15-character capacity. Therefore, the answer is 3.</li>
+                <li><strong>Test case 2:</strong> The first scroll has a capacity of 10 characters. The clues are: ["serious", "the", "case", "is"]. The first two clues "serious" (7 characters) and "the" (3 characters) together take up 10 characters, which is exactly the capacity of the first scroll. The next clue "case" (4 characters) exceeds the limit. Therefore, the answer is 2.</li>
+                <li><strong>Test case 3:</strong> The first scroll has a capacity of 8 characters. The clues are: ["he", "good"]. The first clue "he" (2 characters) and "good" (4 characters) together fit within the 8-character limit. Therefore, the answer is 2.</li>
+            </ul>
+        </div>
+        
+        <div class="page-break"></div>
+
+        <div class="section">
+            <div class="message">
+                <p><strong>Sherlock, you may be stuck thinking about what you should get by solving this puzzle. Use your mastermind, recall your saved ones, and apply them to this algorithm. You might find some interesting clues along the way!</strong></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
